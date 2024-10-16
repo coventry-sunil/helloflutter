@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:helloflutter/Child_one.dart';
+import 'package:helloflutter/child_three.dart';
+import 'package:helloflutter/child_two.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,62 +27,10 @@ class MyApp extends StatelessWidget {
               height: double.infinity,
               width: double.infinity,
               decoration: BoxDecoration(color: Colors.blue[100]),
-              child: Column(
+              child: const Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  const Text(
-                    "Welcome to Hello Flutter App!",
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontStyle: FontStyle.italic),
-                  ),
-                  Column(
-                    children: [
-                      Image.asset(
-                        "assets/images/flutter_icon.png",
-                        width: 100,
-                      ),
-                      const SizedBox(height: 20),
-                      const Text(
-                        "This app is developed by Sunil!",
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                    ],
-                  ),
-                  Container(
-                      padding: const EdgeInsets.all(20),
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                          color: Colors.black,
-                          borderRadius: BorderRadius.circular(20)),
-                      child: Row(
-                        children: [
-                          Image.asset(
-                            'assets/images/lufy.png',
-                            width: 50,
-                          ),
-                          const SizedBox(width: 20),
-                          const Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text("Sunil",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.white)),
-                              Text(
-                                "Flutter Developer",
-                                style: TextStyle(color: Colors.white),
-                              ),
-                              Text(
-                                "www.suneel.com.np",
-                                style: TextStyle(color: Colors.white),
-                              )
-                            ],
-                          )
-                        ],
-                      ))
-                ],
+                children: [ChildOne(), ChildTwo(), ChildThree()],
               ),
             )));
   }
